@@ -37,6 +37,10 @@ nav:
   - Articles and events:
     - External Links and Articles: links_articles.md
     - HacktoberfestES: hacktoberfest_es_2020.md
+  - Contributing:
+    - External Links and Articles: links_articles.md
+    - HacktoberfestES: hacktoberfest_es_2020.md
+
 
 markdown_extensions:
 - admonition: null
