@@ -1,0 +1,56 @@
+site_name: PyMS
+site_url: https://github.com/python-microservices/pyms
+repo_url: https://github.com/python-microservices/pyms
+repo_name: python-microservices/pyms
+site_author: Alberto Vara
+
+nav:
+  - Home: index.md
+  - PyMS Package:
+    - Home: home.md
+    - Installation: installation.md
+    - Quickstart: quickstart.md
+    - Configuration: configuration.md
+    - Services: services.md
+    - Microservice class: ms_class.md
+    - Routing: routing.md
+    - Encrypt/Decrypt Configuration: encrypt_decryt_configuration.md
+    - Command line: command_line.md
+    - Examples: examples.md
+    - PyMS structure: structure.md
+    - Structure of a microservice project: structure_project.md
+  - Introduction to microservices:
+      - Introduction to microservices (ENG): microservices.md
+      - Introduction to microservices (SPA): microservicios.md
+  - Tutorials:
+      - Index: tutorials.md
+      - Create services: tutorial_create_services.md
+      - Propagate traces: tutorial_propagate_traces.md
+  - Projects:
+    - Scaffold:
+        - Index: scaffold/index.md
+        - Quickstart: scaffold/quickstart.md
+        - Configuration: scaffold/configuration.md
+        - Run in Kubernetes: scaffold/runinkubernetes.md
+    - Template:
+        - Index: template/index.md
+  - Articles and events:
+    - External Links and Articles: links_articles.md
+    - HacktoberfestES: hacktoberfest_es_2020.md
+
+markdown_extensions:
+- admonition: null
+- pymdownx.tasklist: null
+
+theme:
+  name: 'material'
+  custom_dir: docs/
+  features:
+      - navigation.tabs
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono

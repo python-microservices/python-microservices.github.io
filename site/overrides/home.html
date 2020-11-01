@@ -1,0 +1,42 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% extends "main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
+  <section class="tx-container">
+    <div class="md-grid md-typeset">
+      <div class="tx-hero">
+        <div class="tx-hero__content">
+          <h1>Python Microservices for the real world </h1>
+          <p>When we started to create a microservice with no previous knowledge, we started looking for tutorials, guides, best practices, but we found
+            nothing to create professional projects. Most articles say: </p>
+          <ul>
+                    <li>"Install flask"</li>
+                    <li>"Create routes"</li>
+                    <li>(Sometimes) "Create a swagger specs"</li>
+                    <li>"TA-DA! you have a microservice"</li>
+          </ul>
+          <p>But... what happens when we want our configuration out of the code, such as a Kubernetes configmap? what happens with transactionality?
+            If we have many microservices, what happens with traces?.</p>
+
+          <p>There are many problems around Python and microservices and we couldn't find anyone to give us a solution.</p>
+
+          <p>We start creating these projects to try to solve all the problems we have found in our professional lives about
+          microservices architecture.</p>
+
+          <p>Nowadays, is not perfect and we have a looong roadmap, but we hope this library could help other felas and friends ;)</p>
+        <div class="tx-hero__image">
+          <img src="imgs/PyMSdistributedtracing.png" alt="" draggable="false">
+        </div>
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+            Quick start
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
