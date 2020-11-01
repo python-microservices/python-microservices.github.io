@@ -17,7 +17,7 @@
     
     
       
-        <title>Contributing - PyMS</title>
+        <title>Index - PyMS</title>
       
     
     
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Contributing
+              Index
             
           </span>
         </div>
@@ -154,14 +154,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." class="md-tabs__link md-tabs__link--active">
+      <a href=".." class="md-tabs__link">
         Home
       </a>
     
@@ -244,7 +246,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../links_articles/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Contributing
         </a>
       
@@ -778,10 +780,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       Contributing
@@ -799,23 +803,152 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../links_articles/" class="md-nav__link">
-      External Links and Articles
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Index
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Index
     </a>
-  </li>
-
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#branch-workflow" class="md-nav__link">
+    Branch workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-message-guidelines" class="md-nav__link">
+    Commit Message Guidelines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipenv" class="md-nav__link">
+    Pipenv
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipenv">
+      <ul class="md-nav__list">
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../hacktoberfest_es_2020/" class="md-nav__link">
-      HacktoberfestES
-    </a>
+          <li class="md-nav__item">
+  <a href="#advantages-over-plain-pip-and-requirementstxt" class="md-nav__link">
+    Advantages over plain pip and requirements.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to" class="md-nav__link">
+    How to...
+  </a>
+  
+    <nav class="md-nav" aria-label="How to...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-pipenv" class="md-nav__link">
+    Install pipenv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-dependencies-defined-in-a-pipfile" class="md-nav__link">
+    Install dependencies defined in a Pipfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-both-dev-and-standard-dependencies-defined-in-a-pipfile" class="md-nav__link">
+    Install both dev and "standard" dependencies defined in a Pipfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-a-new-module" class="md-nav__link">
+    Install a new module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-a-new-dev-module-usually-test-related-stuff" class="md-nav__link">
+    Install a new dev module (usually test related stuff)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-dependencies-in-production" class="md-nav__link">
+    Install dependencies in production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-a-shell" class="md-nav__link">
+    Start a shell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-create-your-own-service" class="md-nav__link">
+    Tutorial: Create your own service
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1046,6 +1179,27 @@ Check out the <a href="https://docs.pytest.org/en/latest/">pytest documentation<
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../hacktoberfest_es_2020/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                HacktoberfestES
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
