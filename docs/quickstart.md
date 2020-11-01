@@ -45,7 +45,7 @@ if it was defined in the pyms configuration block, create a tracer, add health-c
 `ms` attribute and you can access to it with `current_app.ms`. These steps all have their own functions and you can easy override any of them.
 3. `create_app` returns the flask instance and you can interact with it as a typical flask app
 
-# Create a project from scaffold
+## Create a project from scaffold
 
 PyMS has a command line option to create a project template like [Microservices Scaffold](https://github.com/python-microservices/microservices-scaffold).
 This command uses [cookiecutter](https://github.com/cookiecutter/cookiecutter) to download and install this [template](https://github.com/python-microservices/microservices-template)
@@ -53,7 +53,7 @@ This command uses [cookiecutter](https://github.com/cookiecutter/cookiecutter) t
 !!! warning
     First, you must run `pip install cookiecutter==1.7.0`
 
-## Installation
+### Installation
 
 ```bash
 pyms startproject
@@ -83,5 +83,7 @@ Choose from 1, 2, 3, 4, 5, 6 [1]:
 ```
 
 When you finish introducing the options, a project will be created in `[project_folder]` folder
+
+## What's next?
 
 See [Configuration](configuration.md), [Routing](routing.md) and [Examples](examples.md) to continue with this tutorial

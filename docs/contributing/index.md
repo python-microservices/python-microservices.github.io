@@ -3,6 +3,7 @@
 ## Branch workflow
 
 **READ BEFORE CREATE A BRANCH OR OPEN A PR/MR**
+
 - We use [Github Glow](https://guides.github.com/introduction/flow/)
   
 
@@ -94,4 +95,4 @@ pipenv shell
 
 ## Tutorial: Create your own service
 
-See this [tutorial](tutorial_create_services.md)
+See this [tutorial](../tutorial_create_services.md)
