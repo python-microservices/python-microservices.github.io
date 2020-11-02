@@ -11,3 +11,7 @@ With this tutorial you can solve the problem of [distributed tracing](https://mi
 ## Tutorial 2: How To contribute, Create your own service
 
 [See tutorial](tutorial_create_services.md)
+
+## Tutorial 3: Testing with Pytest and PyMS
+
+[See tutorial](tutorial_testing.md)
