@@ -5,7 +5,7 @@ These services are created as an attribute of the [Microservice class](ms_class.
 
 To add a service check the [configuration section](configuration.md).
 
-You can declare a service but activate/deactivate with the keyword `enabled`, like so:
+You can declare a service but **activate/deactivate** with the keyword `enabled`, like so:
 
 ```yaml
 pyms:
@@ -26,14 +26,16 @@ You must install `pyms` with `pip install py-ms[all]` or `pip install py-ms[swag
 
 ### Configuration
 
-The parameters you can add to your config are the folowing:
+The parameters you can add to your config are the following:
 
 * **path:** The relative or absolute route to your swagger yaml file. The default value is the current directory
 * **file:** The name of you swagger yaml file. The default value is `swagger.yaml`
 * **url:** The url where swagger run in your server. The default value is `/ui/`.
 * **project_dir:** Relative path of the project folder to automatic routing, 
 
-see [this link for more info](https://github.com/zalando/connexion#automatic-routing). The default value is `project`.
+See [this link for more info](https://github.com/zalando/connexion#automatic-routing). The default value is `project`.
+
+See [Routing](routing.md) in this documentation to how configure your Swagger.
 
 ### Example
 

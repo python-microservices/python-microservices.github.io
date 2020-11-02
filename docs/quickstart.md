@@ -57,8 +57,7 @@ This command uses [cookiecutter](https://github.com/cookiecutter/cookiecutter) t
 
 ```bash
 pyms startproject
-`
-``
+```
 
 this outputs a lot of options step by step 
 
@@ -86,4 +85,4 @@ When you finish introducing the options, a project will be created in `[project_
 
 ## What's next?
 
-See [Configuration](configuration.md), [Routing](routing.md) and [Examples](examples.md) to continue with this tutorial
+See [Configuration](configuration.md), [Routing](routing.md) and [Examples](tutorials/examples.md) to continue with this tutorial

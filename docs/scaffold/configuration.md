@@ -1,7 +1,8 @@
 # Configuration
 
-Project configuration is loaded using [PyMS](https://github.com/python-microservices/pyms) package based on yml or json file.
-Some example files are config.yml, config-docker.yml and tests/config-tests.yml or see [PyMS configuration](configuration.md)
+Project configuration is loaded using [PyMS](https://github.com/python-microservices/pyms) package 
+based on yml or json file. Some example files are config.yml, config-docker.yml and tests/config-tests.yml 
+or see [PyMS configuration](../configuration.md)
 
 ## Documentation
 The Microservice create a URL to inspect the Swagger documentation of the api in:

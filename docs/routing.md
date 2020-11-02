@@ -1,5 +1,6 @@
 # Routing
-With PyMS you can extend the Microservice with [Connexion](https://github.com/zalando/connexion) and [swagger-ui](https://github.com/sveint/flask-swagger-ui).
+With PyMS you can extend the Microservice with [Connexion](https://github.com/zalando/connexion) and 
+[swagger-ui](https://github.com/sveint/flask-swagger-ui).
 
 To use connexion, you must set in your config.yaml this:
 ```yaml
@@ -100,15 +101,15 @@ As an example, say you have an endpoint specified as:
 
 ```yaml
 paths:
-	/foo:
-		get:
-			operationId: api.foo_get
-			parameters:
-				- name: message
-					description: Some message.
-					in: query
-					type: string
-					required: true
+  /foo:
+	get:
+      operationId: api.foo_get
+	  parameters:
+	  - name: message
+		description: Some message.
+		in: query
+		type: string
+		required: true
 ```
 
 And the view function:

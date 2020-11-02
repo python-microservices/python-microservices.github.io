@@ -115,9 +115,6 @@ pyms:
       url: "/ui/" # <!---
 ```
 
-Read more info in the documentation page: 
-https://microservices-scaffold.readthedocs.io/en/latest/
-
 # Docker
 You can dockerize this microservice wit this steps:
 * Create and push the image

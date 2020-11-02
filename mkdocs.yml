@@ -16,21 +16,22 @@ nav:
     - Routing: routing.md
     - Encrypt/Decrypt Configuration: encrypt_decryt_configuration.md
     - Command line: command_line.md
-    - Examples: examples.md
     - PyMS structure: structure.md
     - Structure of a microservice project: structure_project.md
   - Introduction to microservices:
       - Introduction to microservices (ENG): microservices.md
       - Introduction to microservices (SPA): microservicios.md
   - Tutorials:
-      - Index: tutorials.md
-      - Create services: tutorial_create_services.md
-      - Propagate traces: tutorial_propagate_traces.md
+      - Index: tutorials/tutorials.md
+      - Basic Examples: tutorials/examples.md
+      - Create services: tutorials/tutorial_create_services.md
+      - Propagate traces: tutorials/tutorial_propagate_traces.md
   - Projects:
     - Scaffold:
         - Index: scaffold/index.md
         - Quickstart: scaffold/quickstart.md
         - Configuration: scaffold/configuration.md
+        - Run in Docker: scaffold/runindocker.md
         - Run in Kubernetes: scaffold/runinkubernetes.md
     - Template:
         - Index: template/index.md

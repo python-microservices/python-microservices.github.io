@@ -60,6 +60,16 @@ or in a config.json:
 }
 ```
 
+### Create configuration from command line
+PyMS has a command line option to create a config file.
+You can run the next command in the terminal:
+
+```bash
+pyms create-config
+```
+
+## Configuration file structure
+
 This file can contain the following keywords:
 
 ## pyms - services block
@@ -79,7 +89,7 @@ pyms:
     requests: true
 ```
 
-our `ms` object will have an attribute `requests` that is a instance of our service [requests](services.md). 
+our `ms` object will have an attribute `requests` that is a instance of our [service requests](services.md). 
 
 ## pyms - config block
 This section contains all keywords used for general [Flask Configuration Handling](http://flask.pocoo.org/docs/1.0/config/), along 
@@ -166,7 +176,7 @@ spec:
             name: my-microservice-configmap
 ```
 
-See [Routing](routing.md) and [Examples](examples.md) to continue with this tutorial
+See [Routing](routing.md) and [Examples](tutorials/examples.md) to continue with this tutorial
 
 ## Reload configuration without stopping your services
 

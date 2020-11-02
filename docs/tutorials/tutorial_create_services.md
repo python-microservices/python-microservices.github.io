@@ -1,6 +1,6 @@
 # Tutorial 2: How To contribute, Create your own service
 
-* First, you must create a file with the name of your service inside of `pyms.flask.service`, for example, 
+First, you must create a file with the name of your service inside of `pyms.flask.service`, for example, 
 "myawesomesrv":
 
 pyms/flask/services/myawesomesrv.py
@@ -16,15 +16,23 @@ class Service(DriverService):
     }
 ```
 
-* Now, you can configure your service from `config.yml`
+Now, you can configure your service from `config.yml`
 ```yaml
 pyms:
-  config:
+  services:
     myawesomesrv:
       myvalue: 5
+      myvalue2: 5
 ```
 
-* Your service will be instanced inside the `ms` object in `flask.current_app` object. For example, with the last config,
+All configuration in myawesomesrv (myvalue, myvalue2) is loaded in `self.config`: `self.config.myvalue` and 
+`self.config.myvalue2`.
+
+When you "call" an attribute of your service, `DriverService` searchs in `self.config`, and `self.config` contains 
+the key-values that you've defined in your config.yaml for this service. Therefore, each key in your config.yaml
+is an attribute of your Service.
+
+Your service will be instanced inside the `ms` object in `flask.current_app` object. For example, with the last config,
 you could print the folowing code:
 
 ```python
