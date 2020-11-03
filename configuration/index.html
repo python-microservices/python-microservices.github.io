@@ -201,7 +201,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../tutorials/" class="md-tabs__link">
+        <a href="../tutorials/tutorials/" class="md-tabs__link">
           Tutorials
         </a>
       
@@ -413,6 +413,26 @@
     Create configuration
   </a>
   
+    <nav class="md-nav" aria-label="Create configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-configuration-from-command-line" class="md-nav__link">
+    Create configuration from command line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file-structure" class="md-nav__link">
+    Configuration file structure
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -511,30 +531,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../command_line/" class="md-nav__link">
-      Command line
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../examples/" class="md-nav__link">
-      Examples
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../structure/" class="md-nav__link">
       PyMS structure
     </a>
@@ -547,8 +543,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../structure_project/" class="md-nav__link">
-      Structure of a microservice project
+    <a href="../command_line/" class="md-nav__link">
+      Command line
     </a>
   </li>
 
@@ -635,7 +631,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorials/" class="md-nav__link">
+    <a href="../tutorials/tutorials/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -647,7 +643,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_create_services/" class="md-nav__link">
+    <a href="../tutorials/examples/" class="md-nav__link">
+      Basic Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_create_services/" class="md-nav__link">
       Create services
     </a>
   </li>
@@ -659,8 +667,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_propagate_traces/" class="md-nav__link">
+    <a href="../tutorials/tutorial_propagate_traces/" class="md-nav__link">
       Propagate traces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_testing/" class="md-nav__link">
+      Testing with PyMS
     </a>
   </li>
 
@@ -744,6 +764,18 @@
   <li class="md-nav__item">
     <a href="../scaffold/configuration/" class="md-nav__link">
       Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaffold/runindocker/" class="md-nav__link">
+      Run in Docker
     </a>
   </li>
 
@@ -931,6 +963,26 @@
     Create configuration
   </a>
   
+    <nav class="md-nav" aria-label="Create configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-configuration-from-command-line" class="md-nav__link">
+    Create configuration from command line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file-structure" class="md-nav__link">
+    Configuration file structure
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1038,6 +1090,12 @@ solve two problems of the <a href="https://12factor.net/">12 Factor apps</a>:</p
   }
 }
 </code></pre>
+<h3 id="create-configuration-from-command-line">Create configuration from command line</h3>
+<p>PyMS has a command line option to create a config file.
+You can run the next command in the terminal:</p>
+<pre><code class="language-bash">pyms create-config
+</code></pre>
+<h2 id="configuration-file-structure">Configuration file structure</h2>
 <p>This file can contain the following keywords:</p>
 <h2 id="pyms-services-block">pyms - services block</h2>
 <p><code>pyms</code>: all subsets inside this keyword are the settings of this library. Each keyword will be a service of our
@@ -1050,7 +1108,7 @@ ms = Microservice(path=__file__)
   services:
     requests: true
 </code></pre>
-<p>our <code>ms</code> object will have an attribute <code>requests</code> that is a instance of our service <a href="../services/">requests</a>. </p>
+<p>our <code>ms</code> object will have an attribute <code>requests</code> that is a instance of our <a href="../services/">service requests</a>. </p>
 <h2 id="pyms-config-block">pyms - config block</h2>
 <p>This section contains all keywords used for general <a href="http://flask.pocoo.org/docs/1.0/config/">Flask Configuration Handling</a>, along 
 with our constants for the different enviroments (local configuration, staging configuration...). Keep in mind that 
@@ -1120,7 +1178,7 @@ spec:
           configMap:
             name: my-microservice-configmap
 </code></pre>
-<p>See <a href="../routing/">Routing</a> and <a href="../examples/">Examples</a> to continue with this tutorial</p>
+<p>See <a href="../routing/">Routing</a> and <a href="../tutorials/examples/">Examples</a> to continue with this tutorial</p>
 <h2 id="reload-configuration-without-stopping-your-services">Reload configuration without stopping your services</h2>
 <p>In a production environment you may need to change the microservice's configuration without restarting it.</p>
 <p>PyMS has a feature to reload the configuration:</p>

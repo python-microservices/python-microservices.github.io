@@ -201,7 +201,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../tutorials/" class="md-tabs__link">
+        <a href="../tutorials/tutorials/" class="md-tabs__link">
           Tutorials
         </a>
       
@@ -391,6 +391,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-with-virtualenv-and-requirementstxt" class="md-nav__link">
+    Install with virtualenv and requirements.txt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-pipenv-and-pipfile" class="md-nav__link">
+    Install with pipenv and Pipfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -476,30 +497,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../command_line/" class="md-nav__link">
-      Command line
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../examples/" class="md-nav__link">
-      Examples
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../structure/" class="md-nav__link">
       PyMS structure
     </a>
@@ -512,8 +509,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../structure_project/" class="md-nav__link">
-      Structure of a microservice project
+    <a href="../command_line/" class="md-nav__link">
+      Command line
     </a>
   </li>
 
@@ -600,7 +597,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorials/" class="md-nav__link">
+    <a href="../tutorials/tutorials/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -612,7 +609,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_create_services/" class="md-nav__link">
+    <a href="../tutorials/examples/" class="md-nav__link">
+      Basic Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_create_services/" class="md-nav__link">
       Create services
     </a>
   </li>
@@ -624,8 +633,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_propagate_traces/" class="md-nav__link">
+    <a href="../tutorials/tutorial_propagate_traces/" class="md-nav__link">
       Propagate traces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_testing/" class="md-nav__link">
+      Testing with PyMS
     </a>
   </li>
 
@@ -709,6 +730,18 @@
   <li class="md-nav__item">
     <a href="../scaffold/configuration/" class="md-nav__link">
       Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaffold/runindocker/" class="md-nav__link">
+      Run in Docker
     </a>
   </li>
 
@@ -898,6 +931,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#install-with-virtualenv-and-requirementstxt" class="md-nav__link">
+    Install with virtualenv and requirements.txt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-pipenv-and-pipfile" class="md-nav__link">
+    Install with pipenv and Pipfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -918,9 +972,6 @@
                 <h1 id="installation">Installation</h1>
 <h2 id="python-version">Python Version</h2>
 <p>We recommend using the latest version of Python 3. PyMS supports Python 3.6 and newer and PyPy.</p>
-<pre><code>virtualenv --python=python[3.6|3.7|3.8] venv
-source venv/bin/activate
-</code></pre>
 <h2 id="install-pyms">Install PyMS</h2>
 <p><strong>Installing pyms with all dependencies</strong></p>
 <pre><code>pip install py-ms[all]
@@ -950,6 +1001,39 @@ source venv/bin/activate
 </ul>
 <pre><code>pip install py-ms[trace]
 </code></pre>
+<h2 id="install-with-virtualenv-and-requirementstxt">Install with virtualenv and requirements.txt</h2>
+<p>Create a <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a></p>
+<pre><code>virtualenv --python=python[3.6|3.7|3.8] venv
+source venv/bin/activate
+</code></pre>
+<p>Add in your requirements.txt:</p>
+<pre><code>py-ms[all|metrics|trace]==[VERSION]
+</code></pre>
+<p>In example:</p>
+<pre><code>py-ms[all]&gt;=2.7.0
+</code></pre>
+<p>and then install with</p>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+<h2 id="install-with-pipenv-and-pipfile">Install with pipenv and Pipfile</h2>
+<p>Create a <a href="https://pipenv-es.readthedocs.io/">pipenv</a> environment</p>
+<pre><code>pipenv install
+</code></pre>
+<p>Or install PyMS with the command:</p>
+<pre><code>pipenv install py-ms[all]&gt;=2.7.0
+</code></pre>
+<p>Or add PyMS in your Pipfile:</p>
+<pre><code class="language-toml">[[source]]
+name = &quot;pypi&quot;
+url = &quot;https://pypi.org/simple&quot;
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+py-ms = {extras = [&quot;all&quot;],version = &quot;==2.6.1&quot;}
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
 <p>See <a href="../quickstart/">Quickstart</a> to continue with this tutorial</p>
                 
               

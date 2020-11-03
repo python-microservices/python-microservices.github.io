@@ -201,7 +201,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../tutorials/" class="md-tabs__link">
+        <a href="../tutorials/tutorials/" class="md-tabs__link">
           Tutorials
         </a>
       
@@ -440,30 +440,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../command_line/" class="md-nav__link">
-      Command line
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../examples/" class="md-nav__link">
-      Examples
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../structure/" class="md-nav__link">
       PyMS structure
     </a>
@@ -476,8 +452,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../structure_project/" class="md-nav__link">
-      Structure of a microservice project
+    <a href="../command_line/" class="md-nav__link">
+      Command line
     </a>
   </li>
 
@@ -564,7 +540,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorials/" class="md-nav__link">
+    <a href="../tutorials/tutorials/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -576,7 +552,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_create_services/" class="md-nav__link">
+    <a href="../tutorials/examples/" class="md-nav__link">
+      Basic Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_create_services/" class="md-nav__link">
       Create services
     </a>
   </li>
@@ -588,8 +576,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_propagate_traces/" class="md-nav__link">
+    <a href="../tutorials/tutorial_propagate_traces/" class="md-nav__link">
       Propagate traces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_testing/" class="md-nav__link">
+      Testing with PyMS
     </a>
   </li>
 
@@ -673,6 +673,18 @@
   <li class="md-nav__item">
     <a href="../scaffold/configuration/" class="md-nav__link">
       Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaffold/runindocker/" class="md-nav__link">
+      Run in Docker
     </a>
   </li>
 
@@ -858,7 +870,8 @@
                 
                 
                 <h1 id="routing">Routing</h1>
-<p>With PyMS you can extend the Microservice with <a href="https://github.com/zalando/connexion">Connexion</a> and <a href="https://github.com/sveint/flask-swagger-ui">swagger-ui</a>.</p>
+<p>With PyMS you can extend the Microservice with <a href="https://github.com/zalando/connexion">Connexion</a> and 
+<a href="https://github.com/sveint/flask-swagger-ui">swagger-ui</a>.</p>
 <p>To use connexion, you must set in your config.yaml this:</p>
 <pre><code class="language-yaml">pyms:
   services:
@@ -931,15 +944,15 @@ ms = Microservice(path=__file__)
 <p>Connexion automatically maps the parameters defined in your endpoint specification to arguments of your Python views as named parameters, and, whenever possible, with value casting. Simply define the endpoint's parameters with the same names as your views arguments.</p>
 <p>As an example, say you have an endpoint specified as:</p>
 <pre><code class="language-yaml">paths:
-    /foo:
-        get:
-            operationId: api.foo_get
-            parameters:
-                - name: message
-                    description: Some message.
-                    in: query
-                    type: string
-                    required: true
+  /foo:
+    get:
+      operationId: api.foo_get
+      parameters:
+      - name: message
+        description: Some message.
+        in: query
+        type: string
+        required: true
 </code></pre>
 <p>And the view function:</p>
 <pre><code class="language-python"># api.py file

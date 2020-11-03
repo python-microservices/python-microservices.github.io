@@ -201,7 +201,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../tutorials/" class="md-tabs__link">
+        <a href="../tutorials/tutorials/" class="md-tabs__link">
           Tutorials
         </a>
       
@@ -598,30 +598,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../command_line/" class="md-nav__link">
-      Command line
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../examples/" class="md-nav__link">
-      Examples
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../structure/" class="md-nav__link">
       PyMS structure
     </a>
@@ -634,8 +610,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../structure_project/" class="md-nav__link">
-      Structure of a microservice project
+    <a href="../command_line/" class="md-nav__link">
+      Command line
     </a>
   </li>
 
@@ -722,7 +698,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorials/" class="md-nav__link">
+    <a href="../tutorials/tutorials/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -734,7 +710,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_create_services/" class="md-nav__link">
+    <a href="../tutorials/examples/" class="md-nav__link">
+      Basic Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_create_services/" class="md-nav__link">
       Create services
     </a>
   </li>
@@ -746,8 +734,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../tutorial_propagate_traces/" class="md-nav__link">
+    <a href="../tutorials/tutorial_propagate_traces/" class="md-nav__link">
       Propagate traces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/tutorial_testing/" class="md-nav__link">
+      Testing with PyMS
     </a>
   </li>
 
@@ -831,6 +831,18 @@
   <li class="md-nav__item">
     <a href="../scaffold/configuration/" class="md-nav__link">
       Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaffold/runindocker/" class="md-nav__link">
+      Run in Docker
     </a>
   </li>
 
@@ -1163,7 +1175,7 @@
 <p>Services are libraries, resources and extensions added to the Microservice in the configuration file.
 These services are created as an attribute of the <a href="../ms_class/">Microservice class</a> to use in the code.</p>
 <p>To add a service check the <a href="../configuration/">configuration section</a>.</p>
-<p>You can declare a service but activate/deactivate with the keyword <code>enabled</code>, like so:</p>
+<p>You can declare a service but <strong>activate/deactivate</strong> with the keyword <code>enabled</code>, like so:</p>
 <pre><code class="language-yaml">pyms:
   services:
     requests:
@@ -1175,14 +1187,15 @@ These services are created as an attribute of the <a href="../ms_class/">Microse
 <h3 id="installation">Installation</h3>
 <p>You must install <code>pyms</code> with <code>pip install py-ms[all]</code> or <code>pip install py-ms[swagger]</code></p>
 <h3 id="configuration">Configuration</h3>
-<p>The parameters you can add to your config are the folowing:</p>
+<p>The parameters you can add to your config are the following:</p>
 <ul>
 <li><strong>path:</strong> The relative or absolute route to your swagger yaml file. The default value is the current directory</li>
 <li><strong>file:</strong> The name of you swagger yaml file. The default value is <code>swagger.yaml</code></li>
 <li><strong>url:</strong> The url where swagger run in your server. The default value is <code>/ui/</code>.</li>
 <li><strong>project_dir:</strong> Relative path of the project folder to automatic routing, </li>
 </ul>
-<p>see <a href="https://github.com/zalando/connexion#automatic-routing">this link for more info</a>. The default value is <code>project</code>.</p>
+<p>See <a href="https://github.com/zalando/connexion#automatic-routing">this link for more info</a>. The default value is <code>project</code>.</p>
+<p>See <a href="../routing/">Routing</a> in this documentation to how configure your Swagger.</p>
 <h3 id="example">Example</h3>
 <pre><code class="language-yaml">pyms:
   services:
@@ -1255,7 +1268,7 @@ Library</a>.</p>
 <p>This will add the endpoint <code>/metrics</code> to your microservice, which will expose
 the metrics.</p>
 <h2 id="how-to-contrib">How to contrib:</h2>
-<p><a href="../tutorial_create_services/">See tutorial</a></p>
+<p><a href="tutorial_create_services.md">See tutorial</a></p>
                 
               
               

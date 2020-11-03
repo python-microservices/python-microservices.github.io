@@ -201,7 +201,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../tutorials/" class="md-tabs__link">
+        <a href="../../tutorials/tutorials/" class="md-tabs__link">
           Tutorials
         </a>
       
@@ -429,30 +429,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../command_line/" class="md-nav__link">
-      Command line
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../examples/" class="md-nav__link">
-      Examples
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../structure/" class="md-nav__link">
       PyMS structure
     </a>
@@ -465,8 +441,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../structure_project/" class="md-nav__link">
-      Structure of a microservice project
+    <a href="../../command_line/" class="md-nav__link">
+      Command line
     </a>
   </li>
 
@@ -553,7 +529,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorials/" class="md-nav__link">
+    <a href="../../tutorials/tutorials/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -565,7 +541,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorial_create_services/" class="md-nav__link">
+    <a href="../../tutorials/examples/" class="md-nav__link">
+      Basic Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/tutorial_create_services/" class="md-nav__link">
       Create services
     </a>
   </li>
@@ -577,8 +565,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorial_propagate_traces/" class="md-nav__link">
+    <a href="../../tutorials/tutorial_propagate_traces/" class="md-nav__link">
       Propagate traces
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/tutorial_testing/" class="md-nav__link">
+      Testing with PyMS
     </a>
   </li>
 
@@ -683,6 +683,54 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    Clone the repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-virtualenv" class="md-nav__link">
+    Install with virtualenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-pipenv" class="md-nav__link">
+    Install with pipenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-macos" class="md-nav__link">
+    Install on MacOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Install on MacOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages-over-plain-pip-and-requirementstxt" class="md-nav__link">
+    Advantages over plain pip and requirements.txt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-your-python-script" class="md-nav__link">
+    Run your python script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-the-result" class="md-nav__link">
     Check the result
   </a>
@@ -711,6 +759,18 @@
   <li class="md-nav__item">
     <a href="../configuration/" class="md-nav__link">
       Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runindocker/" class="md-nav__link">
+      Run in Docker
     </a>
   </li>
 
@@ -887,6 +947,54 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    Clone the repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-virtualenv" class="md-nav__link">
+    Install with virtualenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-with-pipenv" class="md-nav__link">
+    Install with pipenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-on-macos" class="md-nav__link">
+    Install on MacOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Install on MacOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages-over-plain-pip-and-requirementstxt" class="md-nav__link">
+    Advantages over plain pip and requirements.txt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-your-python-script" class="md-nav__link">
+    Run your python script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#check-the-result" class="md-nav__link">
     Check the result
   </a>
@@ -918,47 +1026,59 @@
                 
                 
                 <h1 id="installation">Installation</h1>
-<p>Clone the project</p>
-<pre><code>git clone https://github.com/python-microservices/microservices-scaffold.git
+<h3 id="clone-the-repository">Clone the repository</h3>
+<pre><code class="language-bash">git clone git@github.com:purwowd/microservices-scaffold.git
+cd microservices-scaffold
 </code></pre>
-<p>Install your virtualenv</p>
-<pre><code>virtualenv --python=python[3.6|3.7|3.8] venv
+<h3 id="install-with-virtualenv">Install with virtualenv</h3>
+<pre><code class="language-bash">virtualenv --python=python[3.6|3.7|3.8] venv
 source venv/bin/activate
 pip install -r requirements.txt
 </code></pre>
-<p>Or install with pipenv</p>
-<pre><code>pip install pipenv
+<h3 id="install-with-pipenv">Install with pipenv</h3>
+<pre><code class="language-bash">pip install pipenv
 pipenv install
 </code></pre>
-<p>Run the script</p>
-<pre><code>python manage.py runserver
+<h3 id="install-on-macos">Install on MacOS</h3>
+<pre><code class="language-bash">virtualenv -p python3 venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python manage.py runserver
+</code></pre>
+<h4 id="advantages-over-plain-pip-and-requirementstxt">Advantages over plain pip and requirements.txt</h4>
+<p><a href="https://pipenv.readthedocs.io/en/latest/">Pipenv</a> generates two files: a <code>Pipfile</code>and a <code>Pipfile.lock</code>.
+* <code>Pipfile</code>: Is a high level declaration of the dependencies of your project. It can contain "dev" dependencies (usually test related stuff) and "standard" dependencies which are the ones you'll need for your project to function
+* <code>Pipfile.lock</code>: Is the "list" of all the dependencies your Pipfile has installed, along with their version and their hashes. This prevents two things: Conflicts between dependencies and installing a malicious module.</p>
+<p>For a more in-depth explanation please refer to  the <a href="https://pipenv.readthedocs.io/en/latest/">official documentation</a>.</p>
+<h2 id="run-your-python-script">Run your python script</h2>
+<pre><code class="language-bash">python manage.py runserver
 </code></pre>
 <h2 id="check-the-result">Check the result</h2>
-<p>Your default endpoint will be in this url:</p>
-<pre><code>http://127.0.0.1:5000/template/
+<p>Your default endpoints will be in this url:</p>
+<pre><code class="language-bash">http://127.0.0.1:5000/films
+http://127.0.0.1:5000/actors
 </code></pre>
-<p>This URL is setted in your <code>config.yml</code>:</p>
+<p>This URL is set in your <code>config.yml</code>:</p>
 <pre><code class="language-yaml">pyms:
   config:
     DEBUG: false
     TESTING: false
     APP_NAME: Template
-    APPLICATION_ROOT : /template # &lt;!---
+    APPLICATION_ROOT : &quot;&quot; # &lt;!---
 </code></pre>
-<p>You can acceded to a <code>swagger ui &lt;https://swagger.io/tools/swagger-ui/&gt;</code>_ in the next url:</p>
-<pre><code>http://127.0.0.1:5000/template/ui/
+<p>You can acceded to a <a href="https://swagger.io/tools/swagger-ui/">swagger ui</a> in the next url:</p>
+<pre><code class="language-bash">http://127.0.0.1:5000/ui/
 </code></pre>
-<p>This PATH is setted in your <code>config.yml</code>:</p>
-<pre><code class="language-yaml">    pyms:
-      services:
-        swagger:
-          path: &quot;swagger&quot;
-          file: &quot;swagger.yaml&quot;
-          url: &quot;/ui/&quot; # &lt;!---
+<p>This PATH is set in your <code>config.yml</code>:</p>
+<pre><code class="language-yaml">pyms:
+  services:
+    swagger:
+      path: &quot;swagger&quot;
+      file: &quot;swagger.yaml&quot;
+      url: &quot;/ui/&quot; # &lt;!---
 </code></pre>
 <h2 id="template">Template</h2>
-<p>You can create your own project from template:</p>
-<p>https://github.com/python-microservices/microservices-template</p>
+<p>You can create your own project from template: <a href="https://github.com/python-microservices/microservices-template">github.com/python-microservices/microservices-template</a></p>
                 
               
               
