@@ -15,9 +15,8 @@ nav:
     - Microservice class: ms_class.md
     - Routing: routing.md
     - Encrypt/Decrypt Configuration: encrypt_decryt_configuration.md
-    - Command line: command_line.md
     - PyMS structure: structure.md
-    - Structure of a microservice project: structure_project.md
+    - Command line: command_line.md
   - Introduction to microservices:
       - Introduction to microservices (ENG): microservices.md
       - Introduction to microservices (SPA): microservicios.md
@@ -26,6 +25,7 @@ nav:
       - Basic Examples: tutorials/examples.md
       - Create services: tutorials/tutorial_create_services.md
       - Propagate traces: tutorials/tutorial_propagate_traces.md
+      - Testing with PyMS: tutorials/tutorial_testing.md
   - Projects:
     - Scaffold:
         - Index: scaffold/index.md

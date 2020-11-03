@@ -6,7 +6,8 @@ You have applied the Microservice architecture pattern. Requests often span mult
 Each service handles a request by performing one or more operations, e.g. database queries, publishes messages, etc.
 
 PyMS injects a unique request ID with [opentracing](https://github.com/opentracing-contrib/python-flask) and
-passes the external request id to all services that are involved in handling the current request with the [service request](services.md)
+passes the external request id to all services that are involved in handling the current request with the
+[service request](services.md)
 
 ## 1. Simple Trace
 
@@ -189,3 +190,24 @@ You can see the flow of these requests in this diagram:
 
 You can check this example on [this Github page](https://github.com/python-microservices/pyms/tree/master/examples/microservice_distribued_tracing)
 
+The simplest way to start the all-in-one is to use the pre-built image published to DockerHub (a single command line).
+
+# Tracer server
+
+You can see the traces with [jaeger server](https://www.jaegertracing.io/docs/1.20/getting-started/):
+
+```shell
+$ docker run -d --name jaeger \
+  -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
+  -p 5775:5775/udp \
+  -p 6831:6831/udp \
+  -p 6832:6832/udp \
+  -p 5778:5778 \
+  -p 16686:16686 \
+  -p 14268:14268 \
+  -p 14250:14250 \
+  -p 9411:9411 \
+  jaegertracing/all-in-one:1.20
+```
+
+You can then navigate to `http://localhost:16686` to access the Jaeger UI.

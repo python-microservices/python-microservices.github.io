@@ -91,3 +91,10 @@ pyms merge-swagger --file 'app/swagger/swagger.yaml'
 >>  Swagger file generated [swagger-complete.yaml] 
 >>  OK
 ```
+
+### Create configuration from command line
+PyMS has a command line option to create a config file. You can run the next command in the terminal:
+
+```bash
+pyms create-config
+```
