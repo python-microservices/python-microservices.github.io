@@ -11,11 +11,12 @@ nav:
     - Installation: installation.md
     - Quickstart: quickstart.md
     - Configuration: configuration.md
-    - Services: services.md
     - Microservice class: ms_class.md
-    - Routing: routing.md
+    - Services:
+      - List of services: services/services.md
+      - Routing: services/routing.md
+      - Service Discovery: services/services_discovery.md
     - Encrypt/Decrypt Configuration: encrypt_decryt_configuration.md
-    - PyMS structure: structure.md
     - Command line: command_line.md
   - Introduction to microservices:
       - Introduction to microservices (ENG): microservices.md
@@ -35,11 +36,12 @@ nav:
         - Run in Kubernetes: scaffold/runinkubernetes.md
     - Template:
         - Index: template/index.md
+  - Contributing:
+    - Index: contributing/index.md
+    - PyMS structure: contributing/structure.md
   - Articles and events:
     - External Links and Articles: links_articles.md
     - HacktoberfestES: hacktoberfest_es_2020.md
-  - Contributing:
-    - Index: contributing/index.md
 
 markdown_extensions:
 - admonition: null

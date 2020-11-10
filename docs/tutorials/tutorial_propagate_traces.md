@@ -7,7 +7,7 @@ Each service handles a request by performing one or more operations, e.g. databa
 
 PyMS injects a unique request ID with [opentracing](https://github.com/opentracing-contrib/python-flask) and
 passes the external request id to all services that are involved in handling the current request with the
-[service request](services.md)
+[service request](/services/services)
 
 ## 1. Simple Trace
 
@@ -133,7 +133,7 @@ curl 'http://localhost:5001/'
 }
 ```
 
-![Terminal](imgs/multiple-ms.png)
+![Terminal](/imgs/multiple-ms.png)
 
 The second MS will print these logs:
 
@@ -184,7 +184,7 @@ As you can see, both microservices have `"trace": "bb785b88d0456d69"`.
 
 You can see the flow of these requests in this diagram:
 
-![Distributed tracing](imgs/PyMSdistributedtracing.png)
+![Distributed tracing](/imgs/PyMSdistributedtracing.png)
 
 ## Code
 
