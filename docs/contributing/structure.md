@@ -15,6 +15,3 @@ This view is usually used by Kubernetes, Eureka and other systems to check if ou
 
 ### pyms/logger
 Print logger in JSON format to send to server like Elasticsearch. Inject span traces in logger.
-
-### pyms/tracer
-Create an injector `flask_opentracing.FlaskTracer` to use in our projects.
