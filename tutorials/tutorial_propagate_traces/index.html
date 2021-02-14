@@ -233,8 +233,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../links_articles/" class="md-tabs__link">
-          Articles and events
+        <a href="../../contributing/" class="md-tabs__link">
+          Contributing
         </a>
       
     </li>
@@ -246,8 +246,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../contributing/" class="md-tabs__link">
-          Contributing
+        <a href="../../links_articles/" class="md-tabs__link">
+          Articles and events
         </a>
       
     </li>
@@ -381,18 +381,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../services/" class="md-nav__link">
-      Services
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../ms_class/" class="md-nav__link">
       Microservice class
     </a>
@@ -404,8 +392,41 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      Services
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Services" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        <span class="md-nav__icon md-icon"></span>
+        Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../routing/" class="md-nav__link">
+    <a href="../../services/services/" class="md-nav__link">
+      List of services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../services/routing/" class="md-nav__link">
       Routing
     </a>
   </li>
@@ -417,9 +438,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../../encrypt_decryt_configuration/" class="md-nav__link">
-      Encrypt/Decrypt Configuration
+    <a href="../../services/services_discovery/" class="md-nav__link">
+      Service Discovery
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -429,8 +455,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../structure/" class="md-nav__link">
-      PyMS structure
+    <a href="../../encrypt_decryt_configuration/" class="md-nav__link">
+      Encrypt/Decrypt Configuration
     </a>
   </li>
 
@@ -809,11 +835,61 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
+      Contributing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Contributing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/structure/" class="md-nav__link">
+      PyMS structure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
       Articles and events
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Articles and events" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         <span class="md-nav__icon md-icon"></span>
         Articles and events
       </label>
@@ -840,44 +916,6 @@
   <li class="md-nav__item">
     <a href="../../hacktoberfest_es_2020/" class="md-nav__link">
       HacktoberfestES
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Contributing
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Contributing" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon"></span>
-        Contributing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../contributing/" class="md-nav__link">
-      Index
     </a>
   </li>
 
@@ -961,7 +999,7 @@
 Each service handles a request by performing one or more operations, e.g. database queries, publishes messages, etc.</p>
 <p>PyMS injects a unique request ID with <a href="https://github.com/opentracing-contrib/python-flask">opentracing</a> and
 passes the external request id to all services that are involved in handling the current request with the
-<a href="services.md">service request</a></p>
+<a href="/services/services">service request</a></p>
 <h2 id="1-simple-trace">1. Simple Trace</h2>
 <ul>
 <li>
@@ -1063,7 +1101,7 @@ if __name__ == '__main__':
   &quot;main&quot;: &quot;hello world Python Microservice&quot;
 }
 </code></pre>
-<p><img alt="Terminal" src="imgs/multiple-ms.png" /></p>
+<p><img alt="Terminal" src="/imgs/multiple-ms.png" /></p>
 <p>The second MS will print these logs:</p>
 <pre><code class="language-json">{&quot;message&quot;: &quot;There are my headers: \nHost: localhost:5001\r\nUser-Agent: curl/7.58.0\r\nAccept: */*\r\n\r\n&quot;, 
 &quot;timestamp&quot;: &quot;2020-03-14T10:52:25.522844Z&quot;, 
@@ -1102,7 +1140,7 @@ if __name__ == '__main__':
 <p>As you can see, both microservices have <code>"trace": "bb785b88d0456d69"</code>.</p>
 <h2 id="flow">Flow</h2>
 <p>You can see the flow of these requests in this diagram:</p>
-<p><img alt="Distributed tracing" src="imgs/PyMSdistributedtracing.png" /></p>
+<p><img alt="Distributed tracing" src="/imgs/PyMSdistributedtracing.png" /></p>
 <h2 id="code">Code</h2>
 <p>You can check this example on <a href="https://github.com/python-microservices/pyms/tree/master/examples/microservice_distribued_tracing">this Github page</a></p>
 <p>The simplest way to start the all-in-one is to use the pre-built image published to DockerHub (a single command line).</p>
