@@ -1,9 +1,9 @@
 # Services
 
 Services are libraries, resources and extensions added to the Microservice in the configuration file.
-These services are created as an attribute of the [Microservice class](ms_class.md) to use in the code.
+These services are created as an attribute of the [Microservice class](../ms_class.md) to use in the code.
 
-To add a service check the [configuration section](configuration.md).
+To add a service check the [configuration section](../configuration.md).
 
 You can declare a service but **activate/deactivate** with the keyword `enabled`, like so:
 
@@ -84,6 +84,8 @@ pyms:
 Add traces to all executions with [opentracing](https://github.com/opentracing-contrib/python-flask). This service
 solves the problem of [distributed tracing](https://microservices.io/patterns/observability/distributed-tracing.html)
 
+See [Propagate traces tutorial](/tutorials/tutorial_propagate_traces) in this documentation for more information.
+
 ### Installation
 
 You must install `pyms` with `pip install pyms[all]` or `pip install pyms[trace]`
@@ -111,7 +113,7 @@ pyms:
 Adds [Prometheus](https://prometheus.io/) metrics using the [Prometheus Client
 Library](https://github.com/prometheus/client_python).
 
-The folowing metrics are currently available:
+The following metrics are currently available:
 
 - Incoming requests latency as a histogram
   - Metric name: `http_server_requests_seconds`
@@ -158,7 +160,32 @@ You must install `pyms` with `pip install py-ms[all]` or `pip install py-ms[metr
 ```yaml
 pyms:
   services:
-		metrics: true
+    metrics: true
+```
+
+This will add the endpoint `/metrics` to your microservice, which will expose
+the metrics.
+
+## Service discovery
+Adds [Consul](https://www.consul.io/) as service discovery using the [Consul Client
+Library](https://github.com/python-microservices/consulate) or create your own service discovery
+
+See [Service Ddiscovery section](services_discovery.md) in this documentation for more information.
+
+### Installation
+
+You must install `pyms` with `pip install py-ms[all]` or `pip install py-ms[consul]`
+
+### Example
+
+```yaml
+pyms:
+  services:
+    service_discovery:
+      service: consul
+      host: localhost
+      port: 8500
+      autoregister: true
 ```
 
 This will add the endpoint `/metrics` to your microservice, which will expose
@@ -166,4 +193,4 @@ the metrics.
 
 ## How to contrib: 
 
-[See tutorial](tutorial_create_services.md)
+[See tutorial](/tutorials/tutorial_create_services)
