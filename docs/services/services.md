@@ -116,10 +116,40 @@ Library](https://github.com/prometheus/client_python).
 The following metrics are currently available:
 
 - Incoming requests latency as a histogram
-- Incoming requests number as a counter, divided by HTTP method, endpoint and
-  HTTP status
-- Total number of log events divided by level
-- If `tracer` service activated and it's jaeger, it will show its metrics
+  - Metric name: `http_server_requests_seconds`
+  - Labels: 
+    - service: the `APP_NAME`
+    - method: HTTP method (get, post, ...)
+    - uri: Received flask route
+    - status: HTTP status (200, 503, ...)
+- Incoming requests number as a counter
+  - Metric name: `http_server_requests_count`
+  - Labels: 
+    - service: the `APP_NAME`
+    - method: HTTP method (get, post, ...)
+    - uri: Received flask route
+    - status: HTTP status (200, 503, ...)
+- Total number of log events grouped by level
+  - Metric name: `logger_messages_total`
+  - Labels: 
+    - service: the `APP_NAME`
+    - level: log's severity level (warning, info, ...)
+- If the `tracer` service is activated and it's jaeger, it will show its metrics
+  - Metric name: the metrics are not named, but its prefix is `jaeger`
+- If the `requests` service is activated, outgoing requests latency as a histogram:
+  - Metric name: `http_server_responses_seconds`
+  - Labels: 
+    - service: the `APP_NAME`
+    - method: HTTP method (get, post, ...)
+    - uri: Received flask route
+    - status: HTTP status (200, 503, ...)
+- If the `requests` service is activated, outgoing requests number as a counter:
+  - Metric name: `http_server_responses_count`
+  - Labels: 
+    - service: the `APP_NAME`
+    - method: HTTP method (get, post, ...)
+    - uri: Received flask route
+    - status: HTTP status (200, 503, ...)
 
 ### Installation
 
