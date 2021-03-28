@@ -30,10 +30,8 @@ pyms:
     SQLALCHEMY_DATABASE_URI: mysql+mysqlconnector://important_user:****@localhost/my_schema
 ```
 
-You can move this file to a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/), 
-use [Vault](https://learn.hashicorp.com/vault) or encrypt the configuration with [AWS KMS](https://aws.amazon.com/en/kms/)
- or [Google KMS](https://cloud.google.com/kms). We strongly recommend these way of encrypting/decrypting your configuration,
- but if you don't want a vendor locking option or you don't have the resources to use these methods, we provide a way to encrypt
+We strongly recommend this way of encrypting/decrypting your configuration,
+ but if you don't want a vendor locking option, or you don't have the resources to use these methods, we provide a way to encrypt
  and decrypt your variables.
  
 ## 1. Generate a key
@@ -143,3 +141,7 @@ pyms:
     ENC_SQLALCHEMY_DATABASE_URI: "AQICAHiALhLQv4eW8jqUccFSnkyDkBAWLAm97Lr2qmdItkUCIAF+P4u/uqzu8KRT74PsnQXhAAAAoDCBnQYJKoZIhvcNAQcGoIGPMIGMAgEAMIGGBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDPo+k3ZxoI9XVKtHgQIBEIBZmp7UUVjNWd6qKrLVK8oBNczY0CfLH6iAZE3UK5Ofs4+nZFi0PL3SEW8M15VgTpQoC/b0YxDPHjF0V6NHUJcWirSAqKkP5Sz5eSTk91FTuiwDpvYQ2q9aY6w=
 "
 ```
+
+# Method 3: Encrypt and decrypt with GCP KMS
+
+At this moment, PyMS not support [Google KMS](https://cloud.google.com/kms)  encryption, [this issue is in TODO](https://github.com/python-microservices/pyms/issues/228)
