@@ -956,11 +956,13 @@
 like Spring Boot (Java) or Gizmo (Golang). PyMS is a collection of libraries, best practices and recommended ways to build 
 microservices with Python which handles cross-cutting concerns: </p>
 <ul>
-<li>Externalized configuration</li>
+<li><a href="../configuration/">Externalized configuration</a></li>
 <li>Logging</li>
 <li>Health checks</li>
-<li>Metrics</li>
-<li>Distributed tracing</li>
+<li><a href="/services/services/#metrics">Metrics</a></li>
+<li><a href="/tutorials/tutorial_propagate_traces/">Distributed tracing</a></li>
+<li><a href="/services/services_discovery/">Service Discovery</a></li>
+<li><a href="/encrypt_decryt_configuration/">Encryption</a></li>
 </ul>
 <p>PyMS is powered by <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>, <a href="https://github.com/zalando/connexion">Connexion</a> 
 and <a href="https://opentracing.io/">Opentracing</a>.</p>
@@ -976,10 +978,10 @@ nothing to create professional projects. Most articles say:</p>
 </ul>
 <p>But... what happens when we want our configuration out of the code, such as a Kubernetes configmap? what happens with transactionality? 
 If we have many microservices, what happens with traces?.</p>
-<p>There are many problems around Python and microservices and we couldn't find anyone to give us a solution.</p>
+<p>There are many problems around Python and microservices, and we couldn't find anyone to give us a solution.</p>
 <p>We start creating these projects to try to solve all the problems we have found in our professional lives about 
 microservices architecture.</p>
-<p>Nowadays, is not perfect and we have a looong roadmap, but we hope this library could help other felas and friends ;)</p>
+<p>Nowadays, is not perfect, and we have a looong roadmap, but we hope this library could help other felas and friends ;)</p>
                 
               
               

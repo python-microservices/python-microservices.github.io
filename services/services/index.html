@@ -1348,10 +1348,50 @@ Library</a>.</p>
 <p>The following metrics are currently available:</p>
 <ul>
 <li>Incoming requests latency as a histogram</li>
-<li>Incoming requests number as a counter, divided by HTTP method, endpoint and
-  HTTP status</li>
-<li>Total number of log events divided by level</li>
-<li>If <code>tracer</code> service activated and it's jaeger, it will show its metrics</li>
+<li>Metric name: <code>http_server_requests_seconds</code></li>
+<li>Labels: <ul>
+<li>service: the <code>APP_NAME</code></li>
+<li>method: HTTP method (get, post, ...)</li>
+<li>uri: Received flask route</li>
+<li>status: HTTP status (200, 503, ...)</li>
+</ul>
+</li>
+<li>Incoming requests number as a counter</li>
+<li>Metric name: <code>http_server_requests_count</code></li>
+<li>Labels: <ul>
+<li>service: the <code>APP_NAME</code></li>
+<li>method: HTTP method (get, post, ...)</li>
+<li>uri: Received flask route</li>
+<li>status: HTTP status (200, 503, ...)</li>
+</ul>
+</li>
+<li>Total number of log events grouped by level</li>
+<li>Metric name: <code>logger_messages_total</code></li>
+<li>Labels: <ul>
+<li>service: the <code>APP_NAME</code></li>
+<li>level: log's severity level (warning, info, ...)</li>
+</ul>
+</li>
+<li>If the <code>tracer</code> service is activated and it's jaeger, it will show its metrics</li>
+<li>Metric name: the metrics are not named, but its prefix is <code>jaeger</code></li>
+<li>If the <code>requests</code> service is activated, outgoing requests latency as a histogram:</li>
+<li>Metric name: <code>http_server_responses_seconds</code></li>
+<li>Labels: <ul>
+<li>service: the <code>APP_NAME</code></li>
+<li>method: HTTP method (get, post, ...)</li>
+<li>uri: Received flask route</li>
+<li>status: HTTP status (200, 503, ...)</li>
+</ul>
+</li>
+<li>If the <code>requests</code> service is activated, outgoing requests number as a counter:</li>
+<li>Metric name: <code>http_server_responses_count</code></li>
+<li>Labels: <ul>
+<li>service: the <code>APP_NAME</code></li>
+<li>method: HTTP method (get, post, ...)</li>
+<li>uri: Received flask route</li>
+<li>status: HTTP status (200, 503, ...)</li>
+</ul>
+</li>
 </ul>
 <h3 id="installation_3">Installation</h3>
 <p>You must install <code>pyms</code> with <code>pip install py-ms[all]</code> or <code>pip install py-ms[metrics]</code></p>

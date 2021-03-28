@@ -974,10 +974,8 @@ variables, such as:</p>
     SECRET_KEY: &quot;gjr39dkjn344_!67#&quot;
     SQLALCHEMY_DATABASE_URI: mysql+mysqlconnector://important_user:****@localhost/my_schema
 </code></pre>
-<p>You can move this file to a <a href="https://kubernetes.io/docs/concepts/configuration/secret/">Kubernetes secret</a>, 
-use <a href="https://learn.hashicorp.com/vault">Vault</a> or encrypt the configuration with <a href="https://aws.amazon.com/en/kms/">AWS KMS</a>
- or <a href="https://cloud.google.com/kms">Google KMS</a>. We strongly recommend these way of encrypting/decrypting your configuration,
- but if you don't want a vendor locking option or you don't have the resources to use these methods, we provide a way to encrypt
+<p>We strongly recommend this way of encrypting/decrypting your configuration,
+ but if you don't want a vendor locking option, or you don't have the resources to use these methods, we provide a way to encrypt
  and decrypt your variables.</p>
 <h2 id="1-generate-a-key">1. Generate a key</h2>
 <p>PyMS has a command line option to create a key file. This key is created with <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>.
@@ -1048,6 +1046,8 @@ aws cli to decrypt this value and store it in the same variable without the <cod
     ENC_SQLALCHEMY_DATABASE_URI: &quot;AQICAHiALhLQv4eW8jqUccFSnkyDkBAWLAm97Lr2qmdItkUCIAF+P4u/uqzu8KRT74PsnQXhAAAAoDCBnQYJKoZIhvcNAQcGoIGPMIGMAgEAMIGGBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDPo+k3ZxoI9XVKtHgQIBEIBZmp7UUVjNWd6qKrLVK8oBNczY0CfLH6iAZE3UK5Ofs4+nZFi0PL3SEW8M15VgTpQoC/b0YxDPHjF0V6NHUJcWirSAqKkP5Sz5eSTk91FTuiwDpvYQ2q9aY6w=
 &quot;
 </code></pre>
+<h1 id="method-3-encrypt-and-decrypt-with-gcp-kms">Method 3: Encrypt and decrypt with GCP KMS</h1>
+<p>At this moment, PyMS not support <a href="https://cloud.google.com/kms">Google KMS</a>  encryption, <a href="https://github.com/python-microservices/pyms/issues/228">this issue is in TODO</a></p>
                 
               
               
