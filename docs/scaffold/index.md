@@ -4,12 +4,13 @@ This Scaffold is build over [PyMS](https://github.com/python-microservices/pyms)
 like Spring Boot (Java) or Gizmo (Golang). PyMS is a collection of libraries, best practices and recommended ways to build
 microservices with Python which handles cross-cutting concerns:
 
-* Externalized configuration
-* Logging
-* Health checks
-* Metrics
-* Distributed tracing
-
+- [Externalized configuration](configuration.md)
+- Logging
+- Health checks
+- [Metrics](/services/services/#metrics)
+- [Distributed tracing](/tutorials/tutorial_propagate_traces/)
+- [Service Discovery](/services/services_discovery/)
+- [Encryption](/encrypt_decryt_configuration/)
 
 ## Stack
 
